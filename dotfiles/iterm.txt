@@ -1,0 +1,2 @@
+File "com.googlecode.iterm2.plist" is settings for iterm.
+Import settings under General->Preferences by supplying this folder.
