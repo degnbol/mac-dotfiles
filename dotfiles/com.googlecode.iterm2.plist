@@ -130,11 +130,11 @@
 	<key>NSWindow Frame NSNavPanelAutosaveName</key>
 	<string>339 321 799 448 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>565 368 1130 877 0 0 1440 900 </string>
+	<string>0 0 1914 877 0 0 1440 900 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>0 24 1130 876 0 0 1440 900 </string>
+	<string>310 24 1130 876 0 0 1440 900 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
-	<string>350 0 1914 877 0 0 1440 877 </string>
+	<string>3976 141 1130 877 3360 0 1920 1200 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -722,6 +722,8 @@
 			<integer>-1</integer>
 			<key>Scrollback Lines</key>
 			<integer>1000</integer>
+			<key>Scrollback in Alternate Screen</key>
+			<false/>
 			<key>Selected Text Color</key>
 			<dict>
 				<key>Blue Component</key>
@@ -790,7 +792,7 @@
 	<key>NoSyncInstallationId</key>
 	<string>D1C38E88-1CC9-49D7-90C5-8EAEA047846F</string>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>36</integer>
+	<integer>39</integer>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
@@ -1555,7 +1557,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2020-09-04T08:27:16Z</date>
+	<date>2020-09-16T07:45:28Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>ShowFullScreenTabBar</key>
