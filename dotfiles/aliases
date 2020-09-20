@@ -7,11 +7,13 @@ alias lal='exa -al --group-directories-first --classify'
 alias lt='exa -T --group-directories-first --classify'
 alias lta='exa -aT --group-directories-first --classify'
 alias lat='exa -aT --group-directories-first --classify'
+alias l1='exa --group-directories-first -1'
 
 
 alias cd-='cd -'
 
 # untracked normal instead of default (all) to hide many lines of untracked stuff
+alias g='git'
 alias gits='git status -uno'
 alias gita='git add'
 alias gitam='for file in $(git status -uno --short | grep "^.M" | cut -c4-); do git add $file; done'
