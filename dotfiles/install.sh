@@ -38,7 +38,7 @@ vi # check that it also works here
 brew install rename
 
 # python
-conda install numpy scipy pandas ipython biopython
+conda install numpy scipy scikit-learn pandas ipython biopython
 
 
 # install R from https://cran.r-project.org/bin/macosx/ then
