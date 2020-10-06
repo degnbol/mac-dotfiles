@@ -152,3 +152,10 @@ let g:gruvbox_contrast_dark = 'hard'
 colorscheme gruvbox
 autocmd vimenter * colorscheme gruvbox
 
+
+" use insert key as change in visual mode
+vnoremap <Insert> c
+
+
+
+
