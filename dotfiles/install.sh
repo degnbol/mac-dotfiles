@@ -54,7 +54,7 @@ conda install numpy scipy scikit-learn pandas ipython biopython
 # install R from https://cran.r-project.org/bin/macosx/
 # install X11 support from https://www.xquartz.org/ and restart laptop then
 R
-# there has been many issues with data.table which they blame on apple.
+# there has been openMP (multi-process) issues with data.table which they blame on apple. It also wouldn't hurt to run "brew install libomp"
 install.packages("data.table", type="source", repos="https://Rdatatable.gitlab.io/data.table")
 install.packages(c("ggplot2", "Matrix", "tidyverse", "BiocManager"))
 # from bioconductor
