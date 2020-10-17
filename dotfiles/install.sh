@@ -61,4 +61,8 @@ install.packages(c("ggplot2", "Matrix", "tidyverse", "BiocManager"))
 library(BiocManager)
 install(c("DOSE", "fgsea"))  # Gene Set Enrichment Analysis
 
-
+# java from openJDK which is an open replica of oracles corporate version
+brew tap AdoptOpenJDK/openjdk
+brew cask install adoptopenjdk8
+# julia of course
+brew cask install julia
