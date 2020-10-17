@@ -40,8 +40,6 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
-export PATH="$PATH:/Applications/Julia-1.5.app/Contents/Resources/julia/bin"
-
 # add scripts to path
 export PATH="$PATH:$HOME/OneDrive - Danmarks Tekniske Universitet/degnlib"
 export PATH="$PATH:$HOME/biosustain/src" # biosustain code
