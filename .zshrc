@@ -17,7 +17,7 @@ export PATH="$PATH:/usr/local/opt/llvm/bin"  # not sure if needed
 export LIBRARY_PATH="$(echo /usr/local/Cellar/gcc/10.*/lib/gcc/*):$LIBRARY_PATH"
 
 # default user so maybe username is only shown if non-default
-DEFAULT_USER="cdegma"
+DEFAULT_USER="degnbol"
 source ~/dotfiles/oh-my-zsh.zsh
 source ~/dotfiles/zsh_plugins.sh
 # To customize prompt, run `p10k configure` or edit ~/dotfiles/p10k.zsh.
@@ -41,7 +41,7 @@ unset __conda_setup
 # <<< conda initialize <<<
 
 # add scripts to path
-export PATH="$PATH:$HOME/OneDrive - Danmarks Tekniske Universitet/degnlib"
+export PATH="$PATH:$HOME/OneDrive/degnlib"
 export PATH="$PATH:$HOME/biosustain/src" # biosustain code
 # . functions.zsh  # load the default functions for biosustain work
 
