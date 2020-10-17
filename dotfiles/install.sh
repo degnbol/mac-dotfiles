@@ -66,3 +66,7 @@ brew tap AdoptOpenJDK/openjdk
 brew cask install adoptopenjdk8
 # julia of course
 brew cask install julia
+
+# activate the locate command
+sudo launchctl load -w /System/Library/LaunchDaemons/com.apple.locate.plist
+
