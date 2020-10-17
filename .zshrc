@@ -12,8 +12,9 @@ export LANG=en_US.UTF-8
 ZLE_RPROMPT_INDENT=0
 
 export PATH="$HOME/bin:/usr/local/bin:$PATH"
+export PATH="$PATH:/usr/local/opt/llvm/bin"  # not sure if needed
 # trying this so libfortran can be found
-export LIBRARY_PATH="/usr/local/Cellar/gcc/10.2.0/lib/gcc/10:$LIBRARY_PATH"
+export LIBRARY_PATH="$(echo /usr/local/Cellar/gcc/10.*/lib/gcc/*):$LIBRARY_PATH"
 
 # default user so maybe username is only shown if non-default
 DEFAULT_USER="cdegma"
