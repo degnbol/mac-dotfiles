@@ -4,7 +4,7 @@ chsh -s $(which zsh)
 
 # install homebrew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
-brew install exa curl wget htop cmake
+brew install exa curl wget htop cmake gcc llvm
 
 # install oh-my-zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
@@ -51,8 +51,7 @@ brew install rename
 conda install numpy scipy scikit-learn pandas ipython biopython
 
 
-# install R from https://cran.r-project.org/bin/macosx/ then
-brew install llvm
+# install R from https://cran.r-project.org/bin/macosx/
 # install X11 support from https://www.xquartz.org/ and restart laptop then
 R
 # there has been many issues with data.table which they blame on apple.
