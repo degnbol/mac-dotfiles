@@ -4,10 +4,12 @@ chsh -s $(which zsh)
 
 # install homebrew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
-brew install exa curl wget htop cmake gcc llvm
+brew install exa curl wget htop cmake gcc llvm rename
 
 # install oh-my-zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+# move to dotfiles location
+mv "$HOME/.oh-my-zsh" "$HOME/dotfiles/oh-my-zsh" 
 
 # install antibody
 brew install getantibody/tap/antibody
@@ -45,7 +47,6 @@ vi  # check that it works (there should be no error saying ycm shutdown)
 conda activate  # go back to normal
 vi # check that it also works here
 
-brew install rename
 
 # python
 conda install numpy scipy scikit-learn pandas ipython biopython
