@@ -69,8 +69,11 @@ brew cask install adoptopenjdk8
 # julia of course
 brew cask install julia
 
-brew cask install dropbox
+brew cask install dropbox openconnect
 
 # activate the locate command
 sudo launchctl load -w /System/Library/LaunchDaemons/com.apple.locate.plist
+
+# git settings
+git config --global pull.rebase false
 
