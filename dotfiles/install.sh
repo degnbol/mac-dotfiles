@@ -30,7 +30,7 @@ sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.
 
 # open vi and run :PlugInstall
 # there will be an issue with youcompleteme. See after conda install.
-wget https://repo.anaconda.com/miniconda/Miniconda3-latest-MacOSX-x86_64.sh
+curl https://repo.anaconda.com/miniconda/Miniconda3-latest-MacOSX-x86_64.sh > Miniconda3-latest-MacOSX-x86_64.sh
 bash Miniconda3-latest-MacOSX-x86_64.sh
 rm Miniconda3-latest-MacOSX-x86_64.sh
 
@@ -67,6 +67,8 @@ brew tap AdoptOpenJDK/openjdk
 brew cask install adoptopenjdk8
 # julia of course
 brew cask install julia
+
+brew cask install dropbox
 
 # activate the locate command
 sudo launchctl load -w /System/Library/LaunchDaemons/com.apple.locate.plist
