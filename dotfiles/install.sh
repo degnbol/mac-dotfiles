@@ -58,7 +58,7 @@ conda install numpy scipy scikit-learn pandas ipython biopython
 R
 # there has been openMP (multi-process) issues with data.table which they blame on apple. It also wouldn't hurt to run "brew install libomp"
 install.packages("data.table", type="source", repos="https://Rdatatable.gitlab.io/data.table")
-install.packages(c("ggplot2", "Matrix", "tidyverse", "BiocManager"))
+install.packages(c("ggplot2", "Matrix", "tidyverse", "BiocManager", "optparse", "matrixTests"))
 # from bioconductor
 library(BiocManager)
 install(c("DOSE", "fgsea"))  # Gene Set Enrichment Analysis
@@ -70,6 +70,7 @@ brew cask install adoptopenjdk8
 brew cask install julia
 
 brew cask install dropbox openconnect
+brew install miller
 
 # activate the locate command
 sudo launchctl load -w /System/Library/LaunchDaemons/com.apple.locate.plist
