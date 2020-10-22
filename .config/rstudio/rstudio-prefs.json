@@ -20,40 +20,11 @@
     "pdf_previewer": "rstudio",
     "restore_source_documents": false,
     "wrap_tab_navigation": false,
-    "console_double_click_select": true,
-    "save_workspace": "never",
     "reuse_sessions_for_project_links": true,
-    "jobs_tab_visibility": "shown",
-    "panes": {
-        "quadrants": [
-            "Source",
-            "Console",
-            "TabSet1",
-            "TabSet2"
-        ],
-        "tabSet1": [
-            "Environment",
-            "History",
-            "Connections",
-            "Build",
-            "VCS",
-            "Tutorial",
-            "Presentation"
-        ],
-        "tabSet2": [
-            "Files",
-            "Plots",
-            "Packages",
-            "Help",
-            "Viewer"
-        ],
-        "console_left_on_top": false,
-        "console_right_on_top": true
-    },
+    "jobs_tab_visibility": "closed",
     "code_completion": "manual",
     "code_completion_other": "manual",
     "busy_detection": "never",
     "terminal_bell_style": "none",
-    "jobs_tab_visibility": "closed",
     "show_terminal_tab": false
 }
