@@ -1,3 +1,4 @@
 {
-    "duplicateSelection": "Cmd+D"
+    "duplicateSelection": "Cmd+D",
+    "removeline": "Cmd+Backspace"
 }
