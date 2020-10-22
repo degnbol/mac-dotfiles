@@ -66,8 +66,6 @@ install(c("DOSE", "fgsea"))  # Gene Set Enrichment Analysis
 # java from openJDK which is an open replica of oracles corporate version
 brew tap AdoptOpenJDK/openjdk
 brew cask install adoptopenjdk8
-# julia of course
-brew cask install julia
 
 brew cask install dropbox openconnect
 brew install miller
@@ -78,3 +76,6 @@ sudo launchctl load -w /System/Library/LaunchDaemons/com.apple.locate.plist
 # git settings
 git config --global pull.rebase false
 
+# julia
+brew cask install julia
+julia -e 'using Pkg; Pkg.add(["ArgParse", "HypothesisTests"])'
