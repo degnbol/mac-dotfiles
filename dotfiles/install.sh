@@ -69,6 +69,7 @@ brew cask install adoptopenjdk8
 
 brew cask install dropbox openconnect
 brew install miller
+brew install brewsci/bio/pymol # open source version
 
 # activate the locate command
 sudo launchctl load -w /System/Library/LaunchDaemons/com.apple.locate.plist
@@ -78,4 +79,4 @@ git config --global pull.rebase false
 
 # julia
 brew cask install julia
-julia -e 'using Pkg; Pkg.add(["ArgParse", "HypothesisTests"])'
+julia -e 'using Pkg; Pkg.add(["ArgParse", "DataFrames", "DataFramesMeta", "CSV", "Distributions", "HypothesisTests", "MultipleTesting"])'
