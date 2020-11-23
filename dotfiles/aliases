@@ -46,8 +46,11 @@ alias _vi='sudoedit'
 ### others
 
 
-alias dtuvpn='sudo openconnect --no-dtls --user cdegma vpn.ait.dtu.dk'  # alternative: extra-vpn.ait.dtu.dk
+alias dtuvpn='sudo openconnect --no-dtls --user cdegma vpn.ait.dtu.dk'  
+alias dtuevpn='sudo openconnect --no-dtls --user cdegma extra-vpn.ait.dtu.dk'
 alias cwor='ssh -Y cdegma@192.38.13.42'
+alias sophia='ssh cdegma@sophia.dtu.dk'
+alias computerome='ssh cdegma@ssh.computerome.dk'
 
 
 ### functions
