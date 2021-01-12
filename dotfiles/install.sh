@@ -58,7 +58,7 @@ conda install numpy scipy scikit-learn pandas ipython biopython
 R
 # there has been openMP (multi-process) issues with data.table which they blame on apple. It also wouldn't hurt to run "brew install libomp"
 install.packages("data.table", type="source", repos="https://Rdatatable.gitlab.io/data.table")
-install.packages(c("ggplot2", "Matrix", "tidyverse", "BiocManager"))
+install.packages(c("ggplot2", "Matrix", "tidyverse", "BiocManager", "optparse", "matrixTests"))
 # from bioconductor
 library(BiocManager)
 install(c("DOSE", "fgsea"))  # Gene Set Enrichment Analysis
@@ -66,12 +66,19 @@ install(c("DOSE", "fgsea"))  # Gene Set Enrichment Analysis
 # java from openJDK which is an open replica of oracles corporate version
 brew tap AdoptOpenJDK/openjdk
 brew cask install adoptopenjdk8
-# julia of course
-brew cask install julia
 
-brew cask install dropbox
+brew cask install dropbox openconnect
+brew install miller
+brew install brewsci/bio/pymol # open source version
 
 # activate the locate command
 sudo launchctl load -w /System/Library/LaunchDaemons/com.apple.locate.plist
 # disable the play/pause button opening music app
 launchctl unload -w /System/Library/LaunchAgents/com.apple.rcd.plist
+
+# git settings
+git config --global pull.rebase false
+
+# julia
+brew cask install julia
+julia -e 'using Pkg; Pkg.add(["ArgParse", "DataFrames", "DataFramesMeta", "CSV", "Distributions", "HypothesisTests", "MultipleTesting"])'

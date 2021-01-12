@@ -48,3 +48,5 @@ export PATH="$PATH:$HOME/biosustain/src" # biosustain code
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
+# don't share history between tabs
+unsetopt share_history
