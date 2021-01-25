@@ -33,9 +33,12 @@ set scrolloff=2
 " To enter a TAB character when `expandtab` is in effect,
 " CTRL-v-TAB
 set expandtab tabstop=4 shiftwidth=4 softtabstop=4 
+set tabstop=4 shiftwidth=4 softtabstop=4
+autocmd BufRead,BufNewFile *.tsv,*.txt setlocal noexpandtab  " Only for .tsv and .txt files insert real tab by default.
 
 " Indent new line the same as the preceding line
 set autoindent
+set copyindent  " Copy indent from previous line
 
 " statusline indicates insert or normal mode
 set showmode showcmd
@@ -105,6 +108,8 @@ Plug 'tpope/vim-fugitive'
 Plug 'metakirby5/codi.vim'
 Plug 'julialang/julia-vim'
 Plug 'joom/latex-unicoder.vim'
+Plug 'godlygeek/tabular'
+Plug 'junegunn/vim-easy-align'
 " theme
 Plug 'morhetz/gruvbox'
 call plug#end()
@@ -158,4 +163,9 @@ vnoremap <Insert> c
 
 
 
+" Start interactive EasyAlign in visual mode (e.g. vipga)
+xmap ga <Plug>(EasyAlign)
+
+" Start interactive EasyAlign for a motion/text object (e.g. gaip)
+nmap ga <Plug>(EasyAlign)
 
