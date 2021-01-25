@@ -79,4 +79,4 @@ git config --global pull.rebase false
 
 # julia
 brew cask install julia
-julia -e 'using Pkg; Pkg.add(["ArgParse", "DataFrames", "DataFramesMeta", "CSV", "Distributions", "HypothesisTests", "MultipleTesting"])'
+julia -e 'using Pkg; Pkg.add(["ArgParse", "StatsBase", "DataFrames", "DataFramesMeta", "CSV", "Distributions", "HypothesisTests", "MultipleTesting"])'
