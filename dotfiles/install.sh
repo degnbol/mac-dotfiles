@@ -73,6 +73,8 @@ brew install brewsci/bio/pymol # open source version
 
 # activate the locate command
 sudo launchctl load -w /System/Library/LaunchDaemons/com.apple.locate.plist
+# disable the play/pause button opening music app
+launchctl unload -w /System/Library/LaunchAgents/com.apple.rcd.plist
 
 # git settings
 git config --global pull.rebase false
