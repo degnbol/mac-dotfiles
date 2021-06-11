@@ -102,6 +102,33 @@
 			<key>Text</key>
 			<string></string>
 		</dict>
+		<key>0xf710-0x0-0x69</key>
+		<dict>
+			<key>Action</key>
+			<integer>12</integer>
+			<key>Label</key>
+			<string></string>
+			<key>Text</key>
+			<string>/</string>
+		</dict>
+		<key>0xf711-0x0-0x6b</key>
+		<dict>
+			<key>Action</key>
+			<integer>12</integer>
+			<key>Label</key>
+			<string></string>
+			<key>Text</key>
+			<string>*</string>
+		</dict>
+		<key>0xf712-0x0-0x71</key>
+		<dict>
+			<key>Action</key>
+			<integer>12</integer>
+			<key>Label</key>
+			<string></string>
+			<key>Text</key>
+			<string>-</string>
+		</dict>
 		<key>0xf729-0x100000</key>
 		<dict>
 			<key>Action</key>
@@ -1023,12 +1050,14 @@
 			<string>kNextWindowPointerAction</string>
 		</dict>
 	</dict>
+	<key>PreventEscapeSequenceFromClearingHistory</key>
+	<false/>
 	<key>Print In Black And White</key>
 	<true/>
 	<key>QuitWhenAllWindowsClosed</key>
 	<false/>
 	<key>ShowFullScreenTabBar</key>
-	<false/>
+	<true/>
 	<key>SoundForEsc</key>
 	<false/>
 	<key>TabStyleWithAutomaticOption</key>
