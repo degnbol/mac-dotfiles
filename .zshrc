@@ -11,10 +11,11 @@ export LANG=en_US.UTF-8
 # workaround of the right p10k prompt having a gap:
 ZLE_RPROMPT_INDENT=0
 
-export PATH="$HOME/bin:/usr/local/bin:$PATH"
+export PATH="$HOME/bin:$PATH"
+export PATH="$PATH:/Library/TeX/texbin/"  # for latex
 export PATH="$PATH:/usr/local/opt/llvm/bin"  # not sure if needed
 # trying this so libfortran can be found
-export LIBRARY_PATH="$(echo /usr/local/Cellar/gcc/10.*/lib/gcc/*):$LIBRARY_PATH"
+export LIBRARY_PATH="$(echo /usr/local/Cellar/gcc/*/lib/gcc/*):$LIBRARY_PATH"
 
 # default user so maybe username is only shown if non-default
 DEFAULT_USER="degnbol"
@@ -41,8 +42,9 @@ unset __conda_setup
 # <<< conda initialize <<<
 
 # add scripts to path
-export PATH="$PATH:$HOME/OneDrive/degnlib"
+export PATH="$PATH:$HOME/degnlib"
 export PATH="$PATH:$HOME/biosustain/src" # biosustain code
+export PYTHONPATH="$PYTHONPATH:$HOME/biosustain" # biosustain code
 # . functions.zsh  # load the default functions for biosustain work
 
 
