@@ -110,6 +110,7 @@ Plug 'julialang/julia-vim'
 Plug 'joom/latex-unicoder.vim'
 Plug 'godlygeek/tabular'
 Plug 'junegunn/vim-easy-align'
+Plug 'mg979/vim-visual-multi'
 " theme
 Plug 'morhetz/gruvbox'
 call plug#end()
