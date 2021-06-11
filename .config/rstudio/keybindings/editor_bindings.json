@@ -1,4 +1,6 @@
 {
     "duplicateSelection": "Cmd+D",
-    "removeline": "Cmd+Backspace"
+    "removeline": "Cmd+Backspace",
+    "movelinesdown": "Shift+Cmd+Down",
+    "movelinesup": "Shift+Cmd+Up"
 }
