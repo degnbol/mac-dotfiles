@@ -13,6 +13,7 @@ alias l1='exa --group-directories-first -1'
 
 
 alias cd-='cd -'
+alias gerp='grep'
 
 # untracked normal instead of default (all) to hide many lines of untracked stuff
 alias g='git'
