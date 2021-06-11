@@ -5,10 +5,6 @@ chsh -s $(which zsh)
 # install homebrew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 brew install exa curl wget htop cmake gcc llvm rename
-# We want to use gcc installed with brew since it is the newest version. The Mac clang one wasn't the newest.
-# You can always check version and such with which gcc and gcc --version. The mac one is found in /usr/bin/gcc and the brew one is in /usr/local/bin/gcc-{version}
-# Assuming that /usr/local/bin is before /usr/bin in $PATH and that there are not multiple versions of gcc in /usr/local/bin we can simply symlink like so:
-ln -s /usr/local/bin/gcc-[0-9]* /usr/local/bin/gcc
 
 # install oh-my-zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
@@ -40,7 +36,7 @@ curl https://repo.anaconda.com/miniconda/Miniconda3-latest-MacOSX-x86_64.sh > Mi
 bash Miniconda3-latest-MacOSX-x86_64.sh
 rm Miniconda3-latest-MacOSX-x86_64.sh
 
-# It has to be installed with non-conda python3 where both non-conda and conda pythons should have access to pynvim, 
+# Youcompleteme has to be installed with non-conda python3 where both non-conda and conda pythons should have access to pynvim, 
 # which can be checked by running import pynvim inside python3.
 conda install pynvim -c conda-forge
 conda deactivate
