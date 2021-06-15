@@ -46,6 +46,7 @@ python3 ~/.config/nvim/plugged/youcompleteme/install.py
 vi  # check that it works (there should be no error saying ycm shutdown)
 conda activate  # go back to normal
 vi # check that it also works here
+# for every new conda env you have to write conda install pynvim to get it to work for that new env
 
 
 # python
