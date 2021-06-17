@@ -22,6 +22,12 @@ return require("packer").startup(
         use 'tpope/vim-fugitive' -- git
         use "lewis6991/gitsigns.nvim"  -- git decoration
         
+        -- snippet support
+        -- use "hrsh7th/vim-vsnip"
+        -- use "rafamadriz/friendly-snippets"
+
+        use "folke/which-key.nvim"  -- pop-up to help with keybindings that have been started
+
         -- UI
         use {'akinsho/nvim-bufferline.lua', requires = 'kyazdani42/nvim-web-devicons'} -- add a line at the top with all the files open in the buffer
         use "glepnir/galaxyline.nvim"
@@ -32,18 +38,11 @@ return require("packer").startup(
         }
         use "glepnir/dashboard-nvim" -- open to a dashboard for vi without a file selection, requires telescope or an alternative installed.
 
-        -- snippet support
-        -- use "hrsh7th/vim-vsnip"
-        -- use "rafamadriz/friendly-snippets"
-
         -- file managing, picker etc
         -- use "kyazdani42/nvim-tree.lua" -- tree view window for file exploring nvim-tree.lua
         use "ryanoasis/vim-devicons" -- adds icons to files
 
-
-        use "folke/which-key.nvim"  -- pop-up to help with keybindings that have been started
-
-        -- use "tweekmonster/startuptime.vim"  -- use :StartupTime to measure what things are affecting startup time
+        use "tweekmonster/startuptime.vim"  -- use :StartupTime to measure what things are affecting startup time
     end,
     {
         display = {
