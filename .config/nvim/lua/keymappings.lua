@@ -8,6 +8,4 @@ opt = {noremap = true, silent = true}
 utils.map("n", "<leader>/", ":CommentToggle<CR>", opt)
 utils.map("v", "<leader>/", ":CommentToggle<CR>", opt)
 
--- git
-utils.map("n", "<leader>gs", ":Git status -uno<CR>", opt)
 
