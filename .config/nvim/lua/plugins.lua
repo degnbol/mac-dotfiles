@@ -25,6 +25,7 @@ return require("packer").startup(
         -- UI
         use {'akinsho/nvim-bufferline.lua', requires = 'kyazdani42/nvim-web-devicons'} -- add a line at the top with all the files open in the buffer
         use "glepnir/galaxyline.nvim"
+        use "glepnir/dashboard-nvim" -- open to a dashboard for vi without a file selection
 
         -- snippet support
         -- use "hrsh7th/vim-vsnip"
@@ -39,9 +40,8 @@ return require("packer").startup(
             'nvim-telescope/telescope.nvim',
             requires = {{'nvim-lua/popup.nvim'}, {'nvim-lua/plenary.nvim'}}
         }
-        -- use "nvim-telescope/telescope-media-files.nvim"
+        use "nvim-telescope/telescope-media-files.nvim" -- preview images etc. in telescope
 
-        -- use "glepnir/dashboard-nvim"
         use "folke/which-key.nvim"  -- pop-up to help with keybindings that have been started
 
         -- use "tweekmonster/startuptime.vim"  -- use :StartupTime to measure what things are affecting startup time
