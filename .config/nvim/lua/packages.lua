@@ -36,7 +36,8 @@ require "paq-nvim" {
 	"nvim-lua/plenary.nvim";
 	"nvim-telescope/telescope.nvim"; -- Fuzzy finder
 	"glepnir/dashboard-nvim"; -- open to a dashboard for vi without a file selection, requires telescope or an alternative installed.
-    "preservim/nerdtree"; -- instead of kyazdani42/nvim-tree.lua since the latter stalls opening and closing the ~/.config/nvim files for some reason even though StartupTime and such says opening time is fine.
+    -- "preservim/nerdtree"; -- instead of kyazdani42/nvim-tree.lua since the latter stalls opening and closing the ~/.config/nvim files for some reason even though StartupTime and such says opening time is fine.
+    "/Users/degnbol/.config/nvim/unmanaged/nvim-tree.lua/";
 
 	-- "tweekmonster/startuptime.vim";  -- use :StartupTime to measure what things are affecting startup time
 }

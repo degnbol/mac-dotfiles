@@ -34,7 +34,6 @@ utils.opt("o", "timeoutlen", 500) -- time in ms to wait for mapped sequence to c
 -- Highlight on yank, e.g. press Y to yank line which will highlight the line for a moment
 cmd 'au TextYankPost * lua vim.highlight.on_yank {on_visual = false}'
 
-
 -- hide line numbers in terminal windows
 vim.api.nvim_exec([[
    au BufEnter term://* setlocal nonumber
