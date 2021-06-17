@@ -19,11 +19,12 @@ return require("packer").startup(
         use "terrortylor/nvim-comment" -- Toggle commenting out code
         use "windwp/nvim-autopairs" -- auto add second parenthesis etc.
         use {"lukas-reineke/indent-blankline.nvim", branch = "lua"} -- show | on indented lines
-        use 'tpope/vim-fugitive' -- Git
-        -- use "lewis6991/gitsigns.nvim"
+        use 'tpope/vim-fugitive' -- git
+        use "lewis6991/gitsigns.nvim"  -- git decoration
         
-        -- use "akinsho/nvim-bufferline.lua"
-        -- use "glepnir/galaxyline.nvim"
+        -- UI
+        use {'akinsho/nvim-bufferline.lua', requires = 'kyazdani42/nvim-web-devicons'} -- add a line at the top with all the files open in the buffer
+        use "glepnir/galaxyline.nvim"
 
         -- snippet support
         -- use "hrsh7th/vim-vsnip"
@@ -31,7 +32,7 @@ return require("packer").startup(
 
         -- file managing, picker etc
         -- use "kyazdani42/nvim-tree.lua" -- tree view window for file exploring nvim-tree.lua
-        -- use "ryanoasis/vim-devicons"
+        use "ryanoasis/vim-devicons" -- adds icons to files
 
         -- Fuzzy finder
         use {
@@ -41,8 +42,9 @@ return require("packer").startup(
         -- use "nvim-telescope/telescope-media-files.nvim"
 
         -- use "glepnir/dashboard-nvim"
-        use "tweekmonster/startuptime.vim"  -- use :StartupTime to measure what things are affecting startup time
         use "folke/which-key.nvim"  -- pop-up to help with keybindings that have been started
+
+        -- use "tweekmonster/startuptime.vim"  -- use :StartupTime to measure what things are affecting startup time
     end,
     {
         display = {
