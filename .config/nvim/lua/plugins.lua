@@ -25,7 +25,12 @@ return require("packer").startup(
         -- UI
         use {'akinsho/nvim-bufferline.lua', requires = 'kyazdani42/nvim-web-devicons'} -- add a line at the top with all the files open in the buffer
         use "glepnir/galaxyline.nvim"
-        use "glepnir/dashboard-nvim" -- open to a dashboard for vi without a file selection
+        -- Fuzzy finder
+        use {
+            'nvim-telescope/telescope.nvim',
+            requires = {{'nvim-lua/popup.nvim'}, {'nvim-lua/plenary.nvim'}}
+        }
+        use "glepnir/dashboard-nvim" -- open to a dashboard for vi without a file selection, requires telescope or an alternative installed.
 
         -- snippet support
         -- use "hrsh7th/vim-vsnip"
@@ -35,12 +40,6 @@ return require("packer").startup(
         -- use "kyazdani42/nvim-tree.lua" -- tree view window for file exploring nvim-tree.lua
         use "ryanoasis/vim-devicons" -- adds icons to files
 
-        -- Fuzzy finder
-        use {
-            'nvim-telescope/telescope.nvim',
-            requires = {{'nvim-lua/popup.nvim'}, {'nvim-lua/plenary.nvim'}}
-        }
-        use "nvim-telescope/telescope-media-files.nvim" -- preview images etc. in telescope
 
         use "folke/which-key.nvim"  -- pop-up to help with keybindings that have been started
 

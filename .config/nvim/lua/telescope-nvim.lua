@@ -45,36 +45,18 @@ require("telescope").setup {
         qflist_previewer = require "telescope.previewers".vim_buffer_qflist.new,
         -- Developer configurations: Not meant for general override
         buffer_previewer_maker = require "telescope.previewers".buffer_previewer_maker
-    },
-    extensions = {
-        media_files = {
-            filetypes = {"png", "webp", "jpg", "jpeg"},
-            find_cmd = "rg" -- find command (defaults to `fd`)
-        }
     }
 }
 
-require("telescope").load_extension("media_files")
 
 local opt = {noremap = true, silent = true}
 
-vim.g.mapleader = " "
 
--- mappings
+-- mappings, some shown in dashboard
 vim.api.nvim_set_keymap("n", "<Leader>ff", [[<Cmd>lua require('telescope.builtin').find_files()<CR>]], opt)
-vim.api.nvim_set_keymap(
-    "n",
-    "<Leader>fp",
-    [[<Cmd>lua require('telescope').extensions.media_files.media_files()<CR>]],
-    opt
-)
-
 vim.api.nvim_set_keymap("n", "<Leader>fb", [[<Cmd>lua require('telescope.builtin').buffers()<CR>]], opt)
 vim.api.nvim_set_keymap("n", "<Leader>fh", [[<Cmd>lua require('telescope.builtin').help_tags()<CR>]], opt)
 vim.api.nvim_set_keymap("n", "<Leader>fo", [[<Cmd>lua require('telescope.builtin').oldfiles()<CR>]], opt)
-vim.api.nvim_set_keymap("n", "<Leader>fm", [[<Cmd> Neoformat<CR>]], opt)
-
--- dashboard stuff
 vim.api.nvim_set_keymap("n", "<Leader>fw", [[<Cmd> Telescope live_grep<CR>]], opt)
 vim.api.nvim_set_keymap("n", "<Leader>fn", [[<Cmd> DashboardNewFile<CR>]], opt)
 vim.api.nvim_set_keymap("n", "<Leader>bm", [[<Cmd> DashboardJumpMarks<CR>]], opt)
