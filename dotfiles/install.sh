@@ -4,7 +4,7 @@ chsh -s $(which zsh)
 
 # install homebrew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
-brew install exa curl wget htop cmake gcc llvm rename
+brew install exa curl wget htop cmake gcc llvm rename gsed
 
 # install oh-my-zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
@@ -24,7 +24,14 @@ p10k configure
 mv .zshrc{.pre-oh-my-zsh,}
 
 # neovim
-brew install python neovim
+# --HEAD for development version instead of stable necessary for some lua config
+brew install --HEAD luajit
+brew install --HEAD neovim
+brew install npm # install npm for :LspInstall python that install python support for Lsp. 
+
+# install nerdfont
+curl -sS https://webinstall.dev/nerdfont | bash
+
 
 # install VimPlug
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \

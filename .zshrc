@@ -11,7 +11,7 @@ export LANG=en_US.UTF-8
 # workaround of the right p10k prompt having a gap:
 ZLE_RPROMPT_INDENT=0
 
-export PATH="$HOME/bin:$PATH"
+export PATH="$HOME/bin:$HOME/.local/bin:$PATH"
 export PATH="$PATH:/Library/TeX/texbin/"  # for latex
 export PATH="$PATH:/usr/local/opt/llvm/bin"  # not sure if needed
 # trying this so libfortran can be found
@@ -52,3 +52,7 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 
 # don't share history between tabs
 unsetopt share_history
+
+# Generated for envman. Do not edit.
+[ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
+
