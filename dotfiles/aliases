@@ -17,23 +17,32 @@ alias gerp='grep'
 
 # untracked normal instead of default (all) to hide many lines of untracked stuff
 alias g='git'
-alias gits='git status -uno'
-alias gita='git add'
-alias gitam='for file in $(git status -uno --short | grep "^.M" | cut -c4-); do git add $file; done'
-alias gitad='for file in $(git status -uno --short | grep "^.D" | cut -c4-); do git rm $file; done'
-alias gitr='git rm'
+alias gts='git status -uno'
+alias gta='git add'
+alias gtam='for file in $(git status -uno --short | grep "^.M" | cut -c4-); do git add $file; done'
+alias gtar='for file in $(git status -uno --short | grep "^.D" | cut -c4-); do git rm $file; done'
+alias gtr='git rm'
 function gitl {
         git submodule foreach git pull origin master
         git pull $@
 }
-alias gitb='git pull --rebase; git submodule update --rebase'
-alias gitp='git push'
-function gitc {
+alias gtb='git pull --rebase; git submodule update --rebase'
+alias gtp='git push'
+function gtc {
 	message="$@"
 	git commit -m $message
 }
-alias gito='git checkout --'
-alias gitd='git diff'
+alias gto='git checkout --'
+alias gtd='git diff'
+
+# Old names
+alias gits=gts
+alias gita=gta
+alias gitam=gtam
+alias gitl=gtl
+alias gitc=gtc
+alias gitd=gtd
+alias gito=gto
 
 alias chmodx='chmod -R 755'
 
