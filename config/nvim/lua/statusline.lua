@@ -1,24 +1,26 @@
 local gl = require("galaxyline")
 local gls = gl.section
 local condition = require("galaxyline.condition")
+local vim = vim
+local colors = require "themes/onedark"
+
 
 gl.short_line_list = {" "}
 
-local colors = require "themes/onedark"
 
-gls.left[1] = {
-    current_dir = {
-        provider = function()
-            local dir_name = vim.fn.fnamemodify(vim.fn.getcwd(), ":t")
-            return "  " .. dir_name .. " "
-        end,
-        highlight = {colors.grey_fg2, colors.lightbg2},
-        separator = " ",
-        separator_highlight = {colors.lightbg2, colors.statusline_bg}
-    }
-}
+local is_file = function()
+    local file = vim.fn.expand('%:t')
+    if vim.fn.empty(file) == 1 then return false end
+    local size = vim.fn.getfsize(file)
+    if size == 0 or size == -1 or size == -2 then
+        return false
+    end
+    return true
+end
 
 local checkwidth = function()
+    -- also make sure it is a file
+    if not is_file() then return false end
     local squeeze_width = vim.fn.winwidth(0) / 2
     if squeeze_width > 30 then
         return true
@@ -26,46 +28,68 @@ local checkwidth = function()
     return false
 end
 
+gls.left[1] = {
+  FirstElement = {
+    provider = function() return '▋' end,
+    highlight = { colors.darker_black, colors.darker_black }
+  },
+}
+
 gls.left[2] = {
-    DiffAdd = {
-        provider = "DiffAdd",
-        condition = checkwidth,
-        icon = "  ",
-        highlight = {colors.white, colors.statusline_bg}
+    current_dir = {
+        provider = function()
+            local dir_name = vim.fn.fnamemodify(vim.fn.getcwd(), ":t")
+            return "  " .. dir_name .. " "
+        end,
+        condition = is_file,
+        highlight = {colors.grey_fg2, colors.lightbg2},
+        separator = " ",
+        separator_highlight = {colors.lightbg2, colors.darker_black}
     }
 }
 
 gls.left[3] = {
-    DiffModified = {
-        provider = "DiffModified",
+    DiffAdd = {
+        provider = "DiffAdd",
         condition = checkwidth,
-        icon = "   ",
-        highlight = {colors.grey_fg2, colors.statusline_bg}
+        icon = "  ",
+        highlight = {colors.white, colors.darker_black}
     }
 }
 
 gls.left[4] = {
-    DiffRemove = {
-        provider = "DiffRemove",
+    DiffModified = {
+        provider = "DiffModified",
         condition = checkwidth,
-        icon = "  ",
-        highlight = {colors.grey_fg2, colors.statusline_bg}
+        icon = "   ",
+        highlight = {colors.grey_fg2, colors.darker_black}
     }
 }
 
 gls.left[5] = {
-    DiagnosticError = {
-        provider = "DiagnosticError",
-        icon = "  ",
-        highlight = {colors.red, colors.statusline_bg}
+    DiffRemove = {
+        provider = "DiffRemove",
+        condition = checkwidth,
+        icon = "  ",
+        highlight = {colors.grey_fg2, colors.darker_black}
     }
 }
 
 gls.left[6] = {
+    DiagnosticError = {
+        provider = "DiagnosticError",
+        condition = is_file,
+        icon = "  ",
+        highlight = {colors.red, colors.darker_black}
+    }
+}
+
+gls.left[7] = {
     DiagnosticWarn = {
         provider = "DiagnosticWarn",
+        condition = is_file,
         icon = "  ",
-        highlight = {colors.yellow, colors.statusline_bg}
+        highlight = {colors.yellow, colors.darker_black}
     }
 }
 
@@ -79,42 +103,12 @@ gls.right[1] = {
                 return ""
             end
         end,
-        highlight = {colors.grey_fg2, colors.statusline_bg}
+        condition = is_file,
+        highlight = {colors.grey_fg2, colors.darker_black}
     }
 }
 
 gls.right[2] = {
-    GitIcon = {
-        provider = function()
-            return " "
-        end,
-        condition = require("galaxyline.provider_vcs").check_git_workspace,
-        highlight = {colors.grey_fg2, colors.lightbg},
-        separator = "",
-        separator_highlight = {colors.lightbg, colors.statusline_bg}
-    }
-}
-
-gls.right[3] = {
-    GitBranch = {
-        provider = "GitBranch",
-        condition = require("galaxyline.provider_vcs").check_git_workspace,
-        highlight = {colors.grey_fg2, colors.lightbg}
-    }
-}
-
-gls.right[4] = {
-    viMode_icon = {
-        provider = function()
-            return " "
-        end,
-        highlight = {colors.statusline_bg, colors.red},
-        separator = " ",
-        separator_highlight = {colors.red, colors.lightbg}
-    }
-}
-
-gls.right[5] = {
     ViMode = {
         provider = function()
             local alias = {
@@ -134,22 +128,12 @@ gls.right[5] = {
                 return "  " .. current_Mode .. " "
             end
         end,
-        highlight = {colors.red, colors.lightbg}
+        condition = is_file,
+        highlight = {colors.red, colors.darker_black}
     }
 }
 
-gls.right[6] = {
-    some_icon = {
-        provider = function()
-            return " "
-        end,
-        separator = "",
-        separator_highlight = {colors.green, colors.lightbg},
-        highlight = {colors.lightbg, colors.green}
-    }
-}
-
-gls.right[7] = {
+gls.right[3] = {
     line_percentage = {
         provider = function()
             local current_line = vim.fn.line(".")
@@ -160,9 +144,10 @@ gls.right[7] = {
             elseif current_line == vim.fn.line("$") then
                 return "  Bot "
             end
-            local result, _ = math.modf((current_line / total_line) * 100)
-            return "  " .. result .. "% "
+            local percent, _ = math.modf((current_line / total_line) * 100)
+            return string.format("  %2d", percent) .. "% "
         end,
-        highlight = {colors.green, colors.lightbg}
+        condition = is_file,
+        highlight = {colors.green, colors.darker_black}
     }
 }

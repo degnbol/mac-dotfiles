@@ -20,7 +20,7 @@ require 'indent-blankline'
 
 require 'telescope-nvim'
 require 'dashboard'
--- require 'tree'
+require 'tree'
 
 require 'highlights'
 require 'file-icons'
