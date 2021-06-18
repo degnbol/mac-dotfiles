@@ -52,6 +52,7 @@ alias gitl=gtl
 alias gitc=gtc
 alias gitd=gtd
 alias gito=gto
+alias gitp=gtp
 
 alias chmodx='chmod -R 755'
 
