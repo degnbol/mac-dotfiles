@@ -1,4 +1,5 @@
-require 'plugins'
+
+require 'packages'
 require 'settings'
 require 'keymappings'
 require 'colors'
@@ -6,7 +7,6 @@ require 'TrueZen'
 require 'whichkey'
 require 'top-bufferline'
 require 'statusline'
-
 
 -- Languages
 require 'nvim-lspconfig'
@@ -20,7 +20,7 @@ require 'indent-blankline'
 
 require 'telescope-nvim'
 require 'dashboard'
+-- require 'tree'
 
 require 'highlights'
 require 'file-icons'
-

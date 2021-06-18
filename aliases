@@ -20,8 +20,10 @@ alias g='git'
 alias gts='git status -uno'
 alias gta='git add'
 alias gtam='for file in $(git status -uno --short | grep "^.M" | cut -c4-); do git add $file; done'
-alias gtar='for file in $(git status -uno --short | grep "^.D" | cut -c4-); do git rm $file; done'
+alias gtrm='for file in $(git status -uno --short | grep "^.D" | cut -c4-); do git rm $file; done'
 alias gtr='git rm'
+alias gto='git checkout --'
+alias gtd='git diff'
 function gitl {
         git submodule foreach git pull origin master
         git pull $@
@@ -32,14 +34,19 @@ function gtc {
 	message="$@"
 	git commit -m $message
 }
-alias gto='git checkout --'
-alias gtd='git diff'
+function git-recover {
+	# if a file (fname is the only arg) was deleted and the deletion was commit you can get it back with this command.
+	# Get the hash of the commit where it was last mentioned:
+	commit_hash=$(git rev-list HEAD -n1 -- $@)
+	# assuming it was deleted in the last mention then it will be the commit right before that that we want to copy it from (hence ~1)
+	git checkout ${commit_hash}~1 -- $@
+}
 
 # Old names
 alias gits=gts
 alias gita=gta
 alias gitam=gtam
-alias gitar=gtar
+alias gitrm=gtrm
 alias gitr=gtr
 alias gitl=gtl
 alias gitc=gtc

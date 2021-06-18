@@ -1,4 +1,4 @@
--- using { } for using different branch , loading plugin with certain commands etc
+-- Paq as package manager as opposed to Packer in plugins.lua
 require "paq-nvim" {
 	"savq/paq-nvim";
 	-- color
@@ -20,7 +20,7 @@ require "paq-nvim" {
 	"windwp/nvim-autopairs"; -- auto add second parenthesis etc.
 	{"lukas-reineke/indent-blankline.nvim", branch = "lua"}; -- show "|" on indented lines
 	"tpope/vim-fugitive"; -- git
-	"lewis6991/gitsigns.nvim"; -- git decoration
+	"lewis6991/gitsigns.nvim"; -- git decoration to the left
 
 	-- snippet support
 	-- "hrsh7th/vim-vsnip"
@@ -36,8 +36,7 @@ require "paq-nvim" {
 	"nvim-lua/plenary.nvim";
 	"nvim-telescope/telescope.nvim"; -- Fuzzy finder
 	"glepnir/dashboard-nvim"; -- open to a dashboard for vi without a file selection, requires telescope or an alternative installed.
-    -- "preservim/nerdtree"; -- instead of kyazdani42/nvim-tree.lua since the latter stalls opening and closing the ~/.config/nvim files for some reason even though StartupTime and such says opening time is fine.
-    "/Users/degnbol/.config/nvim/unmanaged/nvim-tree.lua/";
+    "kyazdani42/nvim-tree.lua"; -- stalls opening and closing the ~/.config/nvim files for some reason even though StartupTime and such says opening time is fine. Press <C-c> to make it get to the point. It doesn't hurt
 
 	-- "tweekmonster/startuptime.vim";  -- use :StartupTime to measure what things are affecting startup time
 }

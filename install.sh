@@ -1,4 +1,8 @@
 #!/usr/bin/env zsh
+# git settings
+git config --global pull.rebase false
+git clone git@github.com:degnbol/mac-dotfiles.git dotfiles
+
 # make zsh default shell
 chsh -s $(which zsh)
 
@@ -21,7 +25,14 @@ p10k configure
 # run again to install recommended nerd font
 p10k configure
 # don't let them override the .zshrc
-mv .zshrc{.pre-oh-my-zsh,}
+rm ~/.zshrc
+# symlink our own
+ln -s ~/dotfiles/zshrc ~/.zshrc
+ln -s ~/dotfiles/gitconfig .gitconfig
+ln -s ~/dotfiles/Renviron ~/.Renviron
+ln -s ~/dotfiles/r ~/.r
+# we are also setting XDG_CONFIG_HOME in zshrc to the dotfiles location so I'm just being careful in case any configed tool doesn't respect the XDG variable
+ln -s ~/dotfiles/config ~/.config
 
 # neovim
 # --HEAD for development version instead of stable necessary for some lua config
@@ -33,16 +44,6 @@ brew install npm # install npm for :LspInstall python that install python suppor
 curl -sS https://webinstall.dev/nerdfont | bash
 
 
-# install VimPlug
-sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
-       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
-
-# open vi and run :PlugInstall
-# there will be an issue with youcompleteme. See after conda install.
-curl https://repo.anaconda.com/miniconda/Miniconda3-latest-MacOSX-x86_64.sh > Miniconda3-latest-MacOSX-x86_64.sh
-bash Miniconda3-latest-MacOSX-x86_64.sh
-rm Miniconda3-latest-MacOSX-x86_64.sh
-
 # Youcompleteme has to be installed with non-conda python3 where both non-conda and conda pythons should have access to pynvim, 
 # which can be checked by running import pynvim inside python3.
 conda install pynvim -c conda-forge
@@ -50,9 +51,6 @@ conda deactivate
 # pip3 should be installed as a part of the brew python, which is the python we will use here to install youcompleteme
 pip3 install pynvim
 python3 ~/.config/nvim/plugged/youcompleteme/install.py 
-vi  # check that it works (there should be no error saying ycm shutdown)
-conda activate  # go back to normal
-vi # check that it also works here
 # for every new conda env you have to write conda install pynvim to get it to work for that new env
 
 
@@ -83,9 +81,6 @@ brew install brewsci/bio/pymol # open source version
 sudo launchctl load -w /System/Library/LaunchDaemons/com.apple.locate.plist
 # disable the play/pause button opening music app
 launchctl unload -w /System/Library/LaunchAgents/com.apple.rcd.plist
-
-# git settings
-git config --global pull.rebase false
 
 # julia
 brew cask install julia

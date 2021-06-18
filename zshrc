@@ -16,6 +16,8 @@ export PATH="$PATH:/Library/TeX/texbin/"  # for latex
 export PATH="$PATH:/usr/local/opt/llvm/bin"  # not sure if needed
 # trying this so libfortran can be found
 export LIBRARY_PATH="$(echo /usr/local/Cellar/gcc/*/lib/gcc/*):$LIBRARY_PATH"
+# use custom location for nvim init code instead of the default ~/.config/
+export XDG_CONFIG_HOME=$HOME/dotfiles/config
 
 # default user so maybe username is only shown if non-default
 DEFAULT_USER="degnbol"

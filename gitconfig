@@ -1,0 +1,5 @@
+[user]
+	email = christian.degnbol@gmail.com
+	name = Christian Madsen
+[pull]
+	rebase = false
