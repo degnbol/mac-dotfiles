@@ -84,4 +84,5 @@ launchctl unload -w /System/Library/LaunchAgents/com.apple.rcd.plist
 
 # julia
 brew cask install julia
-julia -e 'using Pkg; Pkg.add(["ArgParse", "StatsBase", "DataFrames", "DataFramesMeta", "CSV", "Distributions", "HypothesisTests", "MultipleTesting"])'
+julia -e 'using Pkg; Pkg.add(["LanguageServer", ArgParse", "StatsBase", "DataFrames", "DataFramesMeta", "CSV", "Distributions", "HypothesisTests", "MultipleTesting"])'
+

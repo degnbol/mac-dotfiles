@@ -21,6 +21,7 @@ require "paq-nvim" {
 	{"lukas-reineke/indent-blankline.nvim", branch = "lua"}; -- show "|" on indented lines
 	"tpope/vim-fugitive"; -- git
 	"lewis6991/gitsigns.nvim"; -- git decoration to the left
+    "JuliaEditorSupport/julia-vim"; -- julia support, colors and unicode substitution.
 
 	"folke/which-key.nvim"; -- pop-up to help with keybindings that have been started
 
