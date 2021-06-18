@@ -22,10 +22,6 @@ require "paq-nvim" {
 	"tpope/vim-fugitive"; -- git
 	"lewis6991/gitsigns.nvim"; -- git decoration to the left
 
-	-- snippet support
-	-- "hrsh7th/vim-vsnip"
-	-- "rafamadriz/friendly-snippets"
-
 	"folke/which-key.nvim"; -- pop-up to help with keybindings that have been started
 
 	-- UI

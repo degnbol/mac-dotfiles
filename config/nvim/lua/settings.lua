@@ -28,8 +28,8 @@ utils.opt("o", "mouse", "a") -- activate the mouse, i.e. click to move cursor, d
 utils.opt("o", "termguicolors", true)
 -- utils.opt("w", "cul", true) -- highlight current line
 utils.opt("w", "signcolumn", "yes") -- show a column left of the numbering that can be used to add signs to lines for git etc.
--- utils.opt("o", "updatetime", 2000) -- update interval can be decreased for gitsigns, default = 4000
-utils.opt("o", "timeoutlen", 500) -- time in ms to wait for mapped sequence to complete. Default = 1000. Reduced for quicker suggestion pop-up
+utils.opt("o", "updatetime", 2000) -- update interval can be decreased for gitsigns, default = 4000
+-- utils.opt("o", "timeoutlen", 500) -- time in ms to wait for mapped sequence to complete. Default = 1000. Reduced for quicker suggestion pop-up
 
 -- Highlight on yank, e.g. press Y to yank line which will highlight the line for a moment
 cmd 'au TextYankPost * lua vim.highlight.on_yank {on_visual = false}'

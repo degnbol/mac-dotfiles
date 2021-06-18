@@ -22,10 +22,6 @@ return require("packer").startup(
         use 'tpope/vim-fugitive' -- git
         use "lewis6991/gitsigns.nvim"  -- git decoration
         
-        -- snippet support
-        -- use "hrsh7th/vim-vsnip"
-        -- use "rafamadriz/friendly-snippets"
-
         use "folke/which-key.nvim"  -- pop-up to help with keybindings that have been started
 
         -- UI
@@ -40,7 +36,7 @@ return require("packer").startup(
 
         -- file managing, picker etc
         use "ryanoasis/vim-devicons" -- adds icons to files
-        -- use "kyazdani42/nvim-tree.lua" -- tree view window for file exploring with bug in .config files
+        use "kyazdani42/nvim-tree.lua" -- tree view window for file exploring with bug in .config files
 
         use "tweekmonster/startuptime.vim"  -- use :StartupTime to measure what things are affecting startup time
     end,
