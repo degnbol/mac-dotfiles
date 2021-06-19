@@ -34,9 +34,4 @@ utils.opt("o", "updatetime", 2000) -- update interval can be decreased for gitsi
 -- Highlight on yank, e.g. press Y to yank line which will highlight the line for a moment
 cmd 'au TextYankPost * lua vim.highlight.on_yank {on_visual = false}'
 
--- hide line numbers in terminal windows
-vim.api.nvim_exec([[
-   au BufEnter term://* setlocal nonumber
-]], false)
-
 

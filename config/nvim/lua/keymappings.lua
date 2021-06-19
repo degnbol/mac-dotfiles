@@ -2,6 +2,8 @@ local utils = require('utils')
 local g = vim.g
 
 g.mapleader = ' '
+g.maplocalleader = ' '
+
 opt = {noremap = true, silent = true}
 
 -- Commenting

@@ -20,6 +20,8 @@ require 'gitsigns-nvim' -- git decoration
 require('nvim_comment').setup()
 require 'indent-blankline'
 
+require 'iron-nvim'
+
 require 'telescope-nvim'
 require 'dashboard'
 require 'tree'
