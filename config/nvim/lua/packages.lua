@@ -1,8 +1,14 @@
 -- Paq as package manager as opposed to Packer in plugins.lua
 require "paq-nvim" {
 	"savq/paq-nvim";
+
+    -- typing behaviour
+	"folke/which-key.nvim"; -- pop-up to help with keybindings that have been started
+    "tpope/vim-repeat"; -- change . to repeat last native command to last "full" command, which feels more natural.
+    "tpope/vim-surround"; -- press cs'" to change surrounding ' with ", ds' to delete surrounding ', ysiw) to surround word with ) and yss[ to surround line with [ ... ] (incl. spaces)
+
 	-- color
-	"norcalli/nvim-colorizer.lua"; -- when a hex or other color is defined, highlight the text with its color 
+	"norcalli/nvim-colorizer.lua"; -- when a hex or other color is defined, highlight the text with its color
 	"siduck76/nvim-base16.lua";
 	"maxwells-daemons/base16-gigavolt-scheme";
 
@@ -22,8 +28,8 @@ require "paq-nvim" {
 	"tpope/vim-fugitive"; -- git
 	"lewis6991/gitsigns.nvim"; -- git decoration to the left
     "JuliaEditorSupport/julia-vim"; -- julia support, colors and unicode substitution.
-
-	"folke/which-key.nvim"; -- pop-up to help with keybindings that have been started
+    -- "urbainvaes/vim-ripple"; -- REPL
+    "hkupty/iron.nvim"; -- REPL
 
 	-- UI
 	"kyazdani42/nvim-web-devicons"; -- required by nvim-bufferline
