@@ -23,8 +23,7 @@ local map = vim.api.nvim_set_keymap
 vim.g.mapleader = " "
 
 -- MAPPINGS
-map("n", "<S-t>", [[<Cmd>tabnew<CR>]], opt) -- new tab
-map("n", "<S-x>", [[<Cmd>BufDel<CR>]], opt) -- close tab. :BufDel from https://github.com/ojroques/nvim-bufdel instead of built-in bwipeout.
+map("n", "<leader>x", [[<Cmd>BufDel<CR>]], opt) -- close tab. :BufDel from https://github.com/ojroques/nvim-bufdel instead of built-in bwipeout.
 
 -- move between tabs
 map("n", "<TAB>", [[<Cmd>BufferLineCycleNext<CR>]], opt)
