@@ -39,7 +39,12 @@ g.nvim_tree_icons = {
         symlink_open = ""
     }
 }
--- Mappings for nvimtree
+
+-- when opening a file and a terminal is taking up one of the windows, ignore it for selection of where to put the new window.
+g.nvim_tree_window_picker_exclude = {buftype={'terminal'}}
+
+
+-- Mappings
 
 vim.api.nvim_set_keymap("n", "<C-n>", ":NvimTreeToggle<CR>", {noremap = true, silent = true})
 

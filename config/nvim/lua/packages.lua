@@ -23,7 +23,7 @@ require "paq-nvim" {
 	"hrsh7th/nvim-compe";  -- adds autocompletion
 	"onsails/lspkind-nvim"; -- VS code like pictograms for completion
 	"terrortylor/nvim-comment"; -- Toggle commenting out code
-	"windwp/nvim-autopairs"; -- auto add second parenthesis etc.
+	-- "windwp/nvim-autopairs"; -- auto add second parenthesis etc.
 	{"lukas-reineke/indent-blankline.nvim", branch = "lua"}; -- show "|" on indented lines
 	"tpope/vim-fugitive"; -- git
 	"lewis6991/gitsigns.nvim"; -- git decoration to the left
@@ -40,6 +40,7 @@ require "paq-nvim" {
 	"nvim-telescope/telescope.nvim"; -- Fuzzy finder
 	"glepnir/dashboard-nvim"; -- open to a dashboard for vi without a file selection, requires telescope or an alternative installed.
     "kyazdani42/nvim-tree.lua"; -- stalls opening and closing the ~/.config/nvim files for some reason even though StartupTime and such says opening time is fine. Press <C-c> to make it get to the point. It doesn't hurt
+    "ojroques/nvim-bufdel"; -- :BufDel that deletes a buffer better than built-in :bdelete and :bwipeout, by preserving layout and closing terminal buffers better.
 
 	-- "tweekmonster/startuptime.vim";  -- use :StartupTime to measure what things are affecting startup time
 }
