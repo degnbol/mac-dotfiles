@@ -2,7 +2,7 @@ vim.o.completeopt = "menuone,noselect"
 
 require "compe".setup {
     enabled = true,
-    autocomplete = true,
+    autocomplete = false, -- only make suggestions when prompted
     debug = false,
     min_length = 1,
     preselect = "enable",
@@ -69,3 +69,4 @@ function _G.completions()
 end
 
 vim.api.nvim_set_keymap("i", "<CR>", "v:lua.completions()", {expr = true})
+
