@@ -1,6 +1,5 @@
 local gl = require("galaxyline")
 local gls = gl.section
-local condition = require("galaxyline.condition")
 local vim = vim
 local colors = require "themes/onedark"
 

@@ -46,7 +46,7 @@ g.nvim_tree_window_picker_exclude = {buftype={'terminal'}}
 
 -- Mappings
 
-vim.api.nvim_set_keymap("n", "<C-n>", ":NvimTreeToggle<CR>", {noremap = true, silent = true})
+vim.api.nvim_set_keymap("n", "<leader>t", ":NvimTreeToggle<CR>", {noremap = true, silent = true})
 
 
 function NvimTreeOSOpen()
