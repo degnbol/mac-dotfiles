@@ -6,6 +6,7 @@ require "paq-nvim" {
 	"folke/which-key.nvim"; -- pop-up to help with keybindings that have been started
     "tpope/vim-repeat"; -- change . to repeat last native command to last "full" command, which feels more natural.
     "tpope/vim-surround"; -- press cs'" to change surrounding ' with ", ds' to delete surrounding ', ysiw) to surround word with ) and yss[ to surround line with [ ... ] (incl. spaces)
+    "svermeulen/vim-subversive"; -- add substitution functions to e.g. replace a word with clipboard content by writing siw
 
 	-- color
 	"norcalli/nvim-colorizer.lua"; -- when a hex or other color is defined, highlight the text with its color
