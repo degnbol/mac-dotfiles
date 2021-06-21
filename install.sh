@@ -42,6 +42,13 @@ brew install npm # install npm for :LspInstall python that install python suppor
 
 # install nerdfont
 curl -sS https://webinstall.dev/nerdfont | bash
+# install fira code font
+brew tap homebrew/cask-fonts
+brew install --cask font-fira-code
+# open rstudio and select fira code as font in appearance settings
+# open pycharm -> settings -> editor -> font -> select font and enable ligatures
+# open vs code -> install synthwave '84 then symlink settings from here
+ln -s ~/dotfiles/vscode/settings.json $HOME/Library/Application\ Support/Code/User/settings.json
 
 
 # Youcompleteme has to be installed with non-conda python3 where both non-conda and conda pythons should have access to pynvim, 
