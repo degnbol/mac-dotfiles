@@ -13,7 +13,7 @@
     "scroll_past_end_of_document": true,
     "default_encoding": "UTF-8",
     "default_project_location": "~",
-    "editor_theme": "Cobalt",
+    "editor_theme": "Vibrant Ink",
     "posix_terminal_shell": "zsh",
     "source_with_echo": true,
     "pdf_previewer": "rstudio",

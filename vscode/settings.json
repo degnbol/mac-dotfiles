@@ -1,0 +1,33 @@
+{
+    "julia.enableTelemetry": true,
+    "editor.minimap.enabled": false,
+    "julia.enableCrashReporter": true,
+    "julia.execution.codeInREPL": true,
+    "julia.executablePath": "/usr/local/bin/julia",
+    "[julia]": {
+
+        "editor.quickSuggestions": true
+    },
+    "editor.lightbulb.enabled": false,
+    "editor.hover.enabled": false,
+    "editor.dragAndDrop": false,
+    "git.enabled": false,
+    "git.showCommitInput": false,
+    "editor.codeActionsOnSave": null,
+    "julia.lint.call": false,
+    "terminal.integrated.commandsToSkipShell": [
+        "language-julia.interrupt"
+    ],
+    "editor.autoSurround": "never",
+    "editor.autoClosingQuotes": "never",
+    "python.pythonPath": "/Users/degnbol/miniconda3/envs/neo4j/bin/python",
+    "[latex]": {
+        "editor.formatOnPaste": false,
+        "editor.suggestSelection": "recentlyUsedByPrefix"
+    },
+    "latex-workshop.latex.autoBuild.run": "never",
+    "editor.autoClosingBrackets": "never",
+    "editor.fontFamily": "'Fira Code', Menlo, Monaco, 'Courier New', monospace",
+    "editor.fontLigatures": true,
+    "workbench.colorTheme": "SynthWave '84"
+}
