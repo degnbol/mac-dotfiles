@@ -42,12 +42,12 @@ brew install npm # install npm for :LspInstall python that install python suppor
 
 # install nerdfont
 curl -sS https://webinstall.dev/nerdfont | bash
-# install fira code font
+# install fonts with ligatures. Adding -nerd-font means they are "patched" i.e. versions made by the nerd font people to include all the extra symbols
 brew tap homebrew/cask-fonts
-brew install --cask font-fira-code
+brew install --cask font-fira-code-nerd-font font-jetbrains-mono-nerd-font
 # open rstudio and select fira code as font in appearance settings
 # open pycharm -> settings -> editor -> font -> select font and enable ligatures
-# open vs code -> install synthwave '84 then symlink settings from here
+# open vs code -> install synthwave '84, then cmd + shift + p -> enable neon dream, then symlink settings from here
 ln -s ~/dotfiles/vscode/settings.json $HOME/Library/Application\ Support/Code/User/settings.json
 
 
