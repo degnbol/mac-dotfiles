@@ -30,7 +30,7 @@ rm ~/.zshrc
 ln -s ~/dotfiles/zshrc ~/.zshrc
 ln -s ~/dotfiles/gitconfig .gitconfig
 ln -s ~/dotfiles/Renviron ~/.Renviron
-ln -s ~/dotfiles/r ~/.r
+ln -s ~/dotfiles/R ~/.R
 # we are also setting XDG_CONFIG_HOME in zshrc to the dotfiles location so I'm just being careful in case any configed tool doesn't respect the XDG variable
 ln -s ~/dotfiles/config ~/.config
 
