@@ -8,10 +8,14 @@ au TermClose * call feedkeys("\<cr>")
 " we were editing.
 tnoremap <Esc>          <C-\><C-n><C-w>w
 nmap <localleader><CR>  <Plug>(iron-send-line)j
-vmap <localleader><CR>  <Plug>(iron-visual-send)
+" After sending to visual the cursor jumps to the start of the selection. 
+" `> means go to mark named > which will be at the end of the previous
+" selection.
+vmap <localleader><CR>  <Plug>(iron-visual-send)`>
 nmap <localleader>r     <Plug>(iron-repeat-cmd)
 nmap <localleader>i     <plug>(iron-interrupt)
-nmap <localleader>q     <Plug>(iron-exit)
+" Exit -> focus -> terminal mode -> newline to close window pane.
+nmap <localleader>q     <Plug>(iron-exit):IronFocus<CR>A<CR>
 nmap <localleader>c     <Plug>(iron-clear)
 nmap <localleader><tab> :IronFocus<CR>A
 vmap <localleader><tab> y:IronFocus<CR>pA
