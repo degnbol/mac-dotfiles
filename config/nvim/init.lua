@@ -12,7 +12,7 @@ require 'statusline'
 
 -- Languages
 require 'nvim-lspconfig'
-require('nvim-autopairs').setup()
+-- require('nvim-autopairs').setup()
 require 'nvim-compe' -- requires nvim-autopairs
 require 'treesitter-nvim'
 require('lspkind').init()
