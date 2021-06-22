@@ -31,6 +31,7 @@ require "paq-nvim" {
     "JuliaEditorSupport/julia-vim"; -- julia support, colors and unicode substitution.
     -- "urbainvaes/vim-ripple"; -- REPL has history in repeat command and doesn't run copied things immediately.
     "hkupty/iron.nvim"; -- REPL
+    "jeetsukumaran/vim-pythonsense"; -- python aware changes to [], [[, ]], ][, ]m, ]M, [m, [M for moving cursor to starts and ends of python functions
 
 	-- UI
 	"kyazdani42/nvim-web-devicons"; -- required by nvim-bufferline
