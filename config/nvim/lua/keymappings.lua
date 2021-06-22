@@ -4,7 +4,7 @@ local g = vim.g
 g.mapleader = ' '
 g.maplocalleader = ' '
 
-opt = {noremap = true, silent = true}
+local opt = {noremap = true, silent = true}
 
 -- Commenting
 utils.map("n", "<leader>/", ":CommentToggle<CR>", opt)
