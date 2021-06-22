@@ -1,0 +1,13 @@
+[buildPlans.iosevka-custom]
+family = "Iosevka Custom"
+spacing = "normal"
+serifs = "sans"
+no-cv-ss = true
+
+[buildPlans.iosevka-custom.variants.design]
+zero = "dotted"
+at = "short"
+lig-ltgteq = "slanted"
+
+[buildPlans.iosevka-custom.ligations]
+inherits = "clike"
