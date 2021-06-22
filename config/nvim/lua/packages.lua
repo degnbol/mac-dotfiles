@@ -29,7 +29,7 @@ require "paq-nvim" {
 	"tpope/vim-fugitive"; -- git
 	"lewis6991/gitsigns.nvim"; -- git decoration to the left
     "JuliaEditorSupport/julia-vim"; -- julia support, colors and unicode substitution.
-    -- "urbainvaes/vim-ripple"; -- REPL
+    -- "urbainvaes/vim-ripple"; -- REPL has history in repeat command and doesn't run copied things immediately.
     "hkupty/iron.nvim"; -- REPL
 
 	-- UI
