@@ -795,6 +795,8 @@
 	</dict>
 	<key>Default Bookmark Guid</key>
 	<string>C9029B73-D51F-40AE-8705-A8BD6B38758E</string>
+	<key>DimOnlyText</key>
+	<true/>
 	<key>EnableAPIServer</key>
 	<false/>
 	<key>EscapeShellCharsWithBackslash</key>
@@ -1155,6 +1157,8 @@
 				<key>Red Component</key>
 				<real>1</real>
 			</dict>
+			<key>Blink Allowed</key>
+			<false/>
 			<key>Blinking Cursor</key>
 			<false/>
 			<key>Blur</key>
@@ -1697,7 +1701,7 @@
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>MesloLGS-NF-Regular 13</string>
+			<string>FiraCodeNerdFontCompleteM-Retina 13</string>
 			<key>Only The Default BG Color Uses Transparency</key>
 			<true/>
 			<key>Option Key Sends</key>
@@ -1766,6 +1770,8 @@
 			<string>xterm-256color</string>
 			<key>Transparency</key>
 			<real>0.27748453362944164</real>
+			<key>Unicode Normalization</key>
+			<integer>0</integer>
 			<key>Unlimited Scrollback</key>
 			<false/>
 			<key>Use Bold Font</key>
@@ -1827,6 +1833,8 @@
 			<string>kNextWindowPointerAction</string>
 		</dict>
 	</dict>
+	<key>PreferSpeedToFullLigatureSupport</key>
+	<true/>
 	<key>Print In Black And White</key>
 	<true/>
 	<key>QuitWhenAllWindowsClosed</key>
@@ -1835,8 +1843,14 @@
 	<true/>
 	<key>SoundForEsc</key>
 	<false/>
+	<key>SplitPaneDimmingAmount</key>
+	<real>0.33499096962475872</real>
 	<key>SuppressMultilinePasteWarningWhenPastingOneLineWithTerminalNewline</key>
 	<true/>
+	<key>SwitchPaneModifier</key>
+	<integer>6</integer>
+	<key>SwitchWindowModifier</key>
+	<integer>9</integer>
 	<key>TabStyleWithAutomaticOption</key>
 	<integer>5</integer>
 	<key>TabTransform</key>
