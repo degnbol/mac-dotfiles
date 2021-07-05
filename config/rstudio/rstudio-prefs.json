@@ -2,7 +2,6 @@
     "console_double_click_select": true,
     "save_workspace": "never",
     "remove_history_duplicates": true,
-    "highlight_selected_line": true,
     "num_spaces_for_tab": 4,
     "show_margin": false,
     "insert_matching": false,
@@ -25,5 +24,7 @@
     "code_completion_other": "manual",
     "busy_detection": "never",
     "terminal_bell_style": "none",
-    "show_terminal_tab": false
+    "show_terminal_tab": false,
+    "blinking_cursor": false,
+    "enable_text_drag": false
 }
