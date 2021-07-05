@@ -44,7 +44,7 @@ brew install npm # install npm for :LspInstall python that install python suppor
 curl -sS https://webinstall.dev/nerdfont | bash
 # install fonts with ligatures. Adding -nerd-font means they are "patched" i.e. versions made by the nerd font people to include all the extra symbols
 brew tap homebrew/cask-fonts
-brew install --cask font-fira-code-nerd-font font-jetbrains-mono-nerd-font
+brew install --cask font-fira-code-nerd-font font-jetbrains-mono-nerd-font font-victor-mono-nerd-font
 # open rstudio and select fira code as font in appearance settings
 # open pycharm -> settings -> editor -> font -> select font and enable ligatures
 # open vs code -> install synthwave '84, then cmd + shift + p -> enable neon dream, then symlink settings from here
@@ -68,13 +68,15 @@ conda install numpy scipy scikit-learn pandas ipython biopython
 # install R from https://cran.r-project.org/bin/macosx/
 # install Rstudio from https://rstudio.com/products/rstudio/download/
 # install X11 support from https://www.xquartz.org/ and restart laptop then
-R
-# there has been openMP (multi-process) issues with data.table which they blame on apple. It also wouldn't hurt to run "brew install libomp"
+R -e '
+# there has been openMP (multi-process) issues with data.table which they blame on apple. It also wouldnt hurt to run "brew install libomp"
 install.packages("data.table", type="source", repos="https://Rdatatable.gitlab.io/data.table")
-install.packages(c("ggplot2", "Matrix", "tidyverse", "BiocManager", "optparse", "matrixTests"))
+install.packages(c("ggplot2", "Matrix", "tidyverse", "BiocManager", "optparse", "matrixTests"), repos="https://mirrors.dotsrc.org/cran/")
+install.packages("languageserver", repos="https://mirrors.dotsrc.org/cran/") # for nvim lsp
 # from bioconductor
 library(BiocManager)
 install(c("DOSE", "fgsea"))  # Gene Set Enrichment Analysis
+'
 
 # java from openJDK which is an open replica of oracles corporate version
 brew tap AdoptOpenJDK/openjdk
@@ -91,5 +93,6 @@ launchctl unload -w /System/Library/LaunchAgents/com.apple.rcd.plist
 
 # julia
 brew cask install julia
-julia -e 'using Pkg; Pkg.add(["LanguageServer", ArgParse", "StatsBase", "DataFrames", "DataFramesMeta", "CSV", "Distributions", "HypothesisTests", "MultipleTesting"])'
+# language server for nvim lsp
+julia -e 'using Pkg; Pkg.add(["LanguageServer", "ArgParse", "StatsBase", "DataFrames", "DataFramesMeta", "CSV", "Distributions", "HypothesisTests", "MultipleTesting"])'
 
