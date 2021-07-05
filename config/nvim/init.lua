@@ -11,9 +11,9 @@ require 'top-bufferline'
 require 'statusline'
 
 -- Languages
-require 'nvim-lspconfig'
--- require('nvim-autopairs').setup()
-require 'nvim-compe' -- requires nvim-autopairs
+require'nvim-lspconfig'
+require 'nvim-compe'
+require'lsp_signature'.on_attach()
 require 'treesitter-nvim'
 require('lspkind').init()
 require 'gitsigns-nvim' -- git decoration

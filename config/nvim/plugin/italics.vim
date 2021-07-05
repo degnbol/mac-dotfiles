@@ -1,1 +1,2 @@
-highlight Comment cterm=italic gui=italic
+" uncomment to get italic comments:
+" highlight Comment cterm=italic gui=italic
