@@ -39,6 +39,7 @@ ln -s ~/dotfiles/config ~/.config
 brew install --HEAD luajit
 brew install --HEAD neovim
 brew install npm # install npm for :LspInstall python that install python support for Lsp. 
+npm install -g neovim # if I do :checkhealth it makes a warning recommending to install this so I did
 
 # install nerdfont
 curl -sS https://webinstall.dev/nerdfont | bash
