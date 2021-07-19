@@ -29,5 +29,8 @@
     "editor.autoClosingBrackets": "never",
     "editor.fontFamily": "'FiraCode Nerd Font', 'Fira Code', Menlo, Monaco, 'Courier New', monospace",
     "editor.fontLigatures": "'ss01', 'zero'",
-    "workbench.colorTheme": "SynthWave '84"
+    "workbench.colorTheme": "SynthWave '84",
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter.notebook.ipynb"
+    }
 }
