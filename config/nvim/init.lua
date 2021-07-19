@@ -1,4 +1,3 @@
-
 -- setup heavily inspired by NvChad (https://github.com/siduck76/NvChad)
 
 require 'packages'

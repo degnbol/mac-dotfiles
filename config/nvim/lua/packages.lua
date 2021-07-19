@@ -21,7 +21,8 @@ require "paq-nvim" {
 	"nvim-treesitter/nvim-treesitter"; -- language coloring and ensuring of installation
 	"neovim/nvim-lspconfig"; -- lsp
 	"kabouzeid/nvim-lspinstall"; -- adds :LspInstall <language> for conveniently installing language support
-	"hrsh7th/nvim-compe";  -- adds autocompletion
+	"hrsh7th/nvim-compe";  -- adds autocompletion. It is an alternative to nvim-lua/completion-nvim which online discussions say is slower.
+    "ray-x/lsp_signature.nvim"; -- hover signatures for function arguments. TODO make it work
 	"onsails/lspkind-nvim"; -- VS code like pictograms for completion
 	"terrortylor/nvim-comment"; -- Toggle commenting out code
 	-- "windwp/nvim-autopairs"; -- auto add second parenthesis etc.
